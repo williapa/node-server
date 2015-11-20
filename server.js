@@ -5,9 +5,9 @@ var http = require('http').Server(app);
 var mysql = require('mysql');
 var bodyParser = require("body-parser");
 var connection = mysql.createConnection({
-		host     : 'localhost',
+		host     : '173.194.230.56 ',
 		user     : 'root',
-		password : 'fuck',
+		password : 'hulkhogan',
 		database : 'appointmentpal',
 	});
 app.use(bodyParser.urlencoded({ extended: false }));
