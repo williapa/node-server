@@ -1,0 +1,6 @@
+module: server
+runtime: nodejs
+vm: true
+
+env_variables:
+  SCRIPT: server.js
