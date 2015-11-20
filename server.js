@@ -5,7 +5,7 @@ var http = require('http').Server(app);
 var extend = require('lodash').assign;
 var mysql = require('mysql');
 var bodyParser = require("body-parser");
-var config = require('config.js');
+var config = require('./config.js');
 var connection = mysql.createConnection(extend({
       database: 'library'
     }, config.mysql));
