@@ -2,16 +2,20 @@ var app   = require('express')();
 var uuid = require('node-uuid');
 var crypto = require("crypto");
 var http = require('http').Server(app);
+var extend = require('lodash').assign;
 var mysql = require('mysql');
 var bodyParser = require("body-parser");
-var connection = mysql.createConnection({
-		host     : '173.194.230.56 ',
-		user     : 'root',
-		password : 'hulkhogan',
-		database : 'appointmentpal',
-	});
+var connection = mysql.createConnection(extend({
+      database: 'library'
+    }, config.mysql));
+  
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+
+
+
+
 
 
 //create new appointment
